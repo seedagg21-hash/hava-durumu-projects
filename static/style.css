@@ -1,0 +1,65 @@
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.left-info { display: flex; flex-direction: column; gap: 6px; }
+.location { font-weight: 600; }
+.big-temp { font-size: 3.2em; font-weight: 800; }
+.small-desc { font-size: 1em; opacity: 0.9; }
+
+.right-cat { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.right-cat img { width: 80px; height: auto; margin-bottom: 4px; }
+.extra-info { font-size: 0.8rem; opacity: 0.8; text-align: center; line-height: 1.4; }
+
+.widget { padding: 14px; }
+
+/* Saatlik strip */
+.hourly-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 8px 0 12px;
+}
+.hour-card {
+  flex: 0 0 auto;
+  min-width: 84px;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  background: transparent; /* beyazlık kaldırıldı */
+}
+.hour-card .temp { font-weight: 700; }
+.hour-card .emoji { font-size: 1.2rem; margin: 4px 0; }
+.hour-card .time { font-size: 0.9rem; opacity: 0.8; }
+
+/* Günlük kartlar */
+.daily-scroll { display: flex; gap: 10px; margin-top: 20px;}
+.day-card {
+  flex: 1;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+.day { font-weight: 800; margin-bottom: 6px; }
+.range { font-size: 0.95rem; margin-top: 4px; opacity: 0.85; }
+.desc { font-size: 0.85rem; margin-top: 6px; opacity: 0.8; }
+
+/* Tema renkleri senin verdiğin HEX kodlarla */
+.theme-gunesli { background: #F2E4BB; color: #000; }
+.theme-bulutlu { background: #F2BBDF; color: #000; }
+.theme-yagmurlu { background: #94D7F2; color: #000; }
+.theme-karli   { background: #DDF2CE; color: #000; }
+.theme-gece    { background: #CFACF2; color: #000; }

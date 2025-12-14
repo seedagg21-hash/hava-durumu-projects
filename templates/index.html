@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedi Hava Durumu</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <header class="topbar">
+    <div class="left-info">
+      <div id="location" class="location">Lokasyon</div>
+      <div id="current-temp" class="big-temp">--°C</div>
+      <div id="current-desc" class="small-desc">Durum</div>
+    </div>
+    <div class="right-cat">
+      <img id="cat" src="/static/cat-normal.gif" alt="Kedi" />
+      <div id="extra-info" class="extra-info"></div>
+    </div>
+  </header>
+
+  <section class="widget">
+    <div id="hourly-scroll" class="hourly-scroll"></div>
+    <div id="daily-scroll" class="daily-scroll"></div>
+  </section>
+
+  <script src="/static/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+  </script>
+</body>
+</html>
